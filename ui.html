@@ -1,0 +1,19 @@
+<h2>Transform It</h2>
+<p>Select layer:</p>
+<button id="flip-horizontal">Flip horizontal</button>
+<button id="flip-vertical">Flip vertical</button>
+<button id="rotate">Rotate</button>
+<button id="cancel">Cancel</button>
+<script>
+  document.getElementById("flip-horizontal").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "flip-horizontal" } }, "*");
+  };
+
+  document.getElementById("rotate").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "rotate" } }, "*");
+  };
+
+  document.getElementById("cancel").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "cancel" } }, "*");
+  };
+</script>
